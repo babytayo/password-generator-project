@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheet/style.css">
     <title>password generator</title>
-    <style>
-      
-    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -26,17 +23,25 @@
             max="100"
           value="0"/><br /></div>
        <div class="checkbox"> 
-        <input type="checkbox" id="uppercase" name="uppercase"/>
+        <input type="checkbox" id="uppercase" name="uppercase" checked/>
         <label for=""> Include Uppercase Letters </label><br />
-        <input type="checkbox" id="lowercase" name="lowercase" />
-        <label for="lowercase">Include Lowercase Letters</label><br />
-        <input type="checkbox" id="numbers" name="numbers" />
+        <input type="checkbox" id="lowercase" name="lowercase" checked/>
+        <label for="lowercase">Include Lowercase Letters</label ><br />
+        <input type="checkbox" id="numbers" name="numbers" checked/>
         <label for="numbers">Include Numbers</label><br />
-        <input type="checkbox" id="symbols" name="symbols" />
+        <input type="checkbox" id="symbols" name="symbols" checked/>
         <label for="symbols">Include Symbols</label><br />
       </div>
 
-        <div class="strength-section"><p>STRENGTH</p></div>
+        <div class="strength-section">
+        <div class="strength"><p>STRENGTH</p></div>
+       <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      </div>
         
           <button class="btn" type="button">
             <div class="btn-section">
