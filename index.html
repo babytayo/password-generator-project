@@ -7,115 +7,34 @@
     <link rel="stylesheet" href="./stylesheet/style.css">
     <title>password generator</title>
     <style>
-      /* * {
-        padding: 0;
-        box-sizing: 0;
-        max-width: 0;
-      } */
-
-      body {
-        height: 100vh;
-        width: 100%;
-        background-color: black;
-        color: #fff;
-        font-family: sans-serif;
-      }
-
-      .wrapper {
-        margin: 0 auto;
-        border: 1px solid red;
-        width: 25rem;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        
-      }
-
-      .upper-wrapper {
-        background-color: #24232b;
-        color: #525159;
-        border: 1px solid green;
-        margin-bottom: 2rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2rem;
-      }
-
-      .file-icon{
-        width: 20px;
-      }
-
-      .character-length-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        box-sizing: border-box;
-        border: 1px solid #fff;
-      }
-
-      .ouput {
-        justify-content: center;
-        margin-top: 15px;
-      }
-
-      .lower-wrapper {
-        background-color: #24232b;
-        border: 1px solid;
-        padding: 1rem;
-      }
-
-      .strength-section {
-        background-color: #18171f;
-        color: #525159;
-        font-size: 18px;
-        padding: 0.5rem 2rem;
-        font-weight: bold;
-        margin: 1rem 0;
-      }
-
-      .btn-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .btn {
-        background-color: #a4ffaf;
-        padding: 1rem 7rem;
-        color: #24232b;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-      }
-
-      .next{
-        width: 20px;
-        margin-left: 1.5rem;
-      }
+      
     </style>
   </head>
   <body>
     <div class="wrapper">
       <div class="upper-wrapper">
-        <div><h1>P4$50rD!</h1></div>
+        <div><h1>P4$5W0rD!</h1></div>
         <div class="file-icon-section"><img src="./asset/file-icon.png" alt="" class="file-icon"></div>
       </div>
       <div class="lower-wrapper">
         <div class="character-length-section">
           <div><p>character Length</p></div>
-          <div class="ouput"><output>0</output></div>
+          <div class="ouput"><output name="result" for="range">0</output></div>
         </div>
-        <input type="range" id="range" name="range" /><br />
-        <input type="checkbox" id="uppercase" name="uppercase" />
-        <label for="uppercase"> Include Uppercase Letters </label><br />
+        <div class="filters"><input type="range" id="range" name="range"  min="0"
+          data-sizing="%"
+            max="100"
+          value="0"/><br /></div>
+       <div class="checkbox"> 
+        <input type="checkbox" id="uppercase" name="uppercase"/>
+        <label for=""> Include Uppercase Letters </label><br />
         <input type="checkbox" id="lowercase" name="lowercase" />
         <label for="lowercase">Include Lowercase Letters</label><br />
         <input type="checkbox" id="numbers" name="numbers" />
         <label for="numbers">Include Numbers</label><br />
         <input type="checkbox" id="symbols" name="symbols" />
         <label for="symbols">Include Symbols</label><br />
+      </div>
 
         <div class="strength-section"><p>STRENGTH</p></div>
         
@@ -128,6 +47,25 @@
       </div>
     </div>
 
-    <img src="./asset/IMG-20230310-WA0004.jpg" alt="" />
+    <script>window.addEventListener("DOMContentLoaded", () => {
+  const filters = document.querySelectorAll(".filters input"),
+    output = document.querySelectorAll("output");
+
+  function handleUpdate() {
+    const suffix = this.dataset.sizing || "";
+    document.documentElement.style.setProperty(
+      `--${this.name}`,
+      this.value + suffix
+    );
+    output.forEach((out) => {
+      out.value = this.value;
+    });
+  }
+
+  filters.forEach((input) => input.addEventListener("change", handleUpdate));
+  filters.forEach((input) => input.addEventListener("mousemove", handleUpdate));
+});</script>
+
+    <!-- <img src="./asset/IMG-20230310-WA0004.jpg" alt="" /> -->
   </body>
 </html>
