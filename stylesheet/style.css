@@ -14,6 +14,14 @@
         color: #fff;
       }
 
+      h2{
+         text-align: center;
+      }
+
+output{
+   font-size: 22px;
+}
+
       .wrapper {
         margin: 0 auto;
         /* border: 1px solid red; */
@@ -85,7 +93,7 @@
 
       .box{
         border: 2px solid #fff;
-        width: 10px;
+        width: 7px;
         height: 20px;
         margin-right: 3px;
       }
