@@ -1,10 +1,4 @@
  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;800;900&display=swap');
-/* * {
-        padding: 0;
-        box-sizing: 0;
-        max-width: 0;
-      } */
-
       body {
         height: 100vh;
         width: 100%;
@@ -98,19 +92,25 @@ output{
         margin-right: 3px;
       }
 
-      .btn-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
+     
 
       .btn {
         background-color: #a4ffaf;
-        padding: 1rem 7rem;
+        padding: 1rem 0;
+        width: 100%;
         color: #24232b;
         font-size: 18px;
         font-weight: bold;
-        border: none;
+        border: none;    
+        text-align: center; 
+      }
+
+      .btn-section {
+         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
       }
 
       .next{
@@ -154,7 +154,7 @@ input[type=range]:focus {
 }
 input[type=range] {
    /* fix for FF unable to apply focus style bug  */
-   border: 1px solid #17161e;;
+   border: 1px solid #17161e;
    /required for proper track sizing in FF/
    width: 300px;
 }

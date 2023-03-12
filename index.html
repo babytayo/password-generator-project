@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheet/style.css">
-    <title>password generator</title>
+    <title>passw0rd generat0r</title>
   </head>
   <body>
-    <h2>Passw0rd  Generat0r</h2>
+    
+
     <div class="wrapper">
+      <h2 style="color: #525159;">Passw0rd  Generat0r</h2>
       <div class="upper-wrapper">
         <div><h1>P4$5W0rD!</h1></div>
         <div class="file-icon-section"><img src="./asset/file-icon.png" alt="" class="file-icon"></div>
@@ -19,7 +21,7 @@
           <div><p>character Length</p></div>
           <div class="ouput"><output name="result" for="range">0</output></div>
         </div>
-        <div class="filters"><input type="range" id="range" name="range"  min="0"
+        <div class="character-length"><input type="range" id="range" name="range"  min="0"
           data-sizing="%"
             max="100"
           value="0"/><br /></div>
@@ -46,17 +48,18 @@
         
           <button class="btn" type="button">
             <div class="btn-section">
-            <div>GENERATE</div>
-            <div><img src="./asset/next-icon.png" alt="" class="next"/></div>
+               <div>GENERATE</div>
+               <div><img src="./asset/next-icon.png" alt="" class="next"/></div>
+            </div>
           </button>
         </div>
       </div>
+       <h2 style="color: #525159; margin-bottom: 3rem;">cl0ned by 0m0tay0</h2>
     </div>
 
-    <h2 style="color: #525159;">cloned by 0m0tayo</h2>
-
-    <script>window.addEventListener("DOMContentLoaded", () => {
-  const filters = document.querySelectorAll(".filters input"),
+    <script>
+    window.addEventListener("DOMContentLoaded", () => {
+  const filters = document.querySelectorAll(".character-length input"),
     output = document.querySelectorAll("output");
 
   function handleUpdate() {
